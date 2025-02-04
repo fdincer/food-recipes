@@ -1,6 +1,5 @@
 
 export interface Categories {
-    categories: {
-        strCategory: string;
-    }
+    categoryName: string;
+    categoryThumb: string;
 }
