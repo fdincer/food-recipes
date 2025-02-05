@@ -1,14 +1,26 @@
 import Sidebar from "../../Components/Sidebar";
+
 import { useLoaderData } from "react-router";
-import type { HomeLoaderResult } from "./homeLoader";
+import { HomeLoaderResult } from "./homeLoader";
+
+
 
 export default function HomePage(){
     const data = useLoaderData() as HomeLoaderResult;
 
+   
+    
+
+
     return(
-        <div className="flex sm:flex-col md:flex-row">
+        
+        <div className="flex flex-col">
             <Sidebar data={data} />
-            Home Page
+            <div>
+                Homepage
+               
+            </div>
+            
         </div>
     )
 }

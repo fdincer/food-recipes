@@ -1,5 +1,5 @@
 
-export interface Categories {
+export interface Categories{
     categoryName: string;
     categoryThumb: string;
 }

@@ -10,7 +10,6 @@ interface GetCategoryResponse {
 export async function getCategories(): Promise<Categories[]>{ 
 
     const res = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-    
     const data: GetCategoryResponse = await res.json();
 
     return data.categories.map( (category) => {
@@ -18,6 +17,5 @@ export async function getCategories(): Promise<Categories[]>{
             categoryName: category.strCategory,
             categoryThumb: category.strCategoryThumb
         };
-    });
-    
+    }); 
 }
