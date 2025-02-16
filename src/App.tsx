@@ -6,6 +6,7 @@ import HomePage from "./Pages/Homepage/HomePage"
 import SearchPage from './Pages/Searchpage/SearchPage';
 import RecipePage from './Pages/Recipepage/RecipePage';
 import { homeLoader } from './Pages/Homepage/homeLoader';
+import { recipeLoader } from './Pages/Recipepage/recipeLoader';
 
 
 const router = createBrowserRouter([
@@ -23,8 +24,9 @@ const router = createBrowserRouter([
         element: <SearchPage />
       },
       {
-        path: "/recipe",
-        element: <RecipePage />
+        path: "/recipe/:name",
+        element: <RecipePage />,
+        loader: recipeLoader
       }
     ]
   }

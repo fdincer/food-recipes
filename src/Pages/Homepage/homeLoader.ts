@@ -5,18 +5,27 @@ import { getRandomRecipe } from "../../Api/Queries/getRandomRecipes";
 import { RecipeItem } from "../../Api/Types/RecipeItem";
 
 export interface HomeLoaderResult {
-    allCategories: Categories[];  
+    categories: Categories[];  
     randomRecipe: RecipeItem[];
+    randomRecipe2: RecipeItem[];
+    randomRecipe3: RecipeItem[];
+    randomRecipe4: RecipeItem[];
 }
 
 export async function homeLoader(): Promise<HomeLoaderResult> {
+
     const allCategories = await getCategories();
+
     const recipe = await getRandomRecipe();
-    console.log(allCategories);
-    console.log(recipe);
+    const recipe2 = await getRandomRecipe();
+    const recipe3 = await getRandomRecipe();
+    const recipe4 = await getRandomRecipe();
 
     return {
-        allCategories,
-        randomRecipe: recipe
+        categories: allCategories,
+        randomRecipe: recipe,
+        randomRecipe2: recipe2,
+        randomRecipe3: recipe3,
+        randomRecipe4: recipe4,
     }
 }

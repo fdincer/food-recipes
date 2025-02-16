@@ -1,10 +1,10 @@
 import type { RecipeItem } from "../Types/RecipeItem";
 
 interface RecipeItemResponse {
-    meals:{
+    meals: {
         strMeal: string;
         strCategory: string;
-        strTags?: string[];
+        strTags: string;
         strMealThumb: string;
     }[];
 }
@@ -14,12 +14,12 @@ export async function getRandomRecipe(): Promise<RecipeItem[]> {
     const res = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
     const data: RecipeItemResponse = await res.json();
 
-    return data.meals.map( (meal) => {
+    return data.meals.map( (r) => {
         return {
-            recipeName: meal.strMeal,
-            recipeCategory: meal.strCategory,
-            recipeThumb: meal.strMealThumb,
-            recipeTags: meal.strTags,
+            recipeName: r.strMeal,
+            recipeCategory: r.strCategory,
+            recipeTags: r.strTags,
+            recipeThumb: r.strMealThumb
         };
-    });
+    });   
 }
