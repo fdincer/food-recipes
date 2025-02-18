@@ -1,5 +1,4 @@
 import { getRecipeDetails } from "../../Api/Queries/getRecipeDetails";
-
 import type { RecipeItemDetails } from "../../Api/Types/RecipeItemDetails";
 import type { Params } from "react-router";
 
@@ -8,11 +7,9 @@ export interface RecipePageLoader {
     recipe: RecipeItemDetails[];
 }
 
-
 interface LoaderArgs{
     params: Params;
 }
-
 
 export async function recipeLoader( { params }: LoaderArgs): Promise<RecipePageLoader> {
     

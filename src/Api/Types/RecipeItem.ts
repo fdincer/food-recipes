@@ -1,7 +1,8 @@
 
 export interface RecipeItem {
     recipeName: string;
-    recipeCategory: string;
+    recipeCategory?: string;
     recipeThumb: string;
-    recipeTags: string;
+    recipeTags?: string;
+    recipeId?: string;
 }

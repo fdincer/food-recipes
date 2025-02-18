@@ -4,7 +4,7 @@ import { Categories } from "../Api/Types/Category";
 export default function Sidebar( {data}: { data: Categories[]} ) {
     
     const renderedCategories = data.map( (cat) => {
-        return <Link to={"/"} key={cat.categoryName} 
+        return <Link to={`/search/category/${cat.categoryName}`} key={cat.categoryName} 
                     className="flex flex-col items-center m-2 p-1 hover:bg-gray-100 hover:underline">
             <div>
                 <img src={cat.categoryThumb} alt={cat.categoryName} className="w-24 m-1"/>

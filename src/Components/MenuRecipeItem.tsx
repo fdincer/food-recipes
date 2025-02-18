@@ -13,7 +13,6 @@ export default function MenuRecipeItem({recipe}: { recipe: RecipeItem[]} ) {
     
     const renderedRandomRecipe = recipe.map( (r) => {
         const tags = r.recipeTags;
-
         let renderedTags;
 
         if(tags !== null){
@@ -27,7 +26,7 @@ export default function MenuRecipeItem({recipe}: { recipe: RecipeItem[]} ) {
         } 
 
         return (
-            <div className="flex items-center border rounded-xl m-2 bg-amber-50 p-4 h-72 w-xl" key={r.recipeName}>
+            <div className="flex items-center border rounded-xl m-2 bg-amber-50 p-4 h-72 w-xl sm:mx-auto" key={r.recipeName}>
                 <div>
                     <img src={r.recipeThumb} alt={r.recipeName} className="w-60" />
                 </div>
