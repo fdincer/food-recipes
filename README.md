@@ -1,5 +1,5 @@
-# React + TypeScript + Vite
+This project is made for educational purposes. It's purpose is to search meal recipes and look for ingredient list and instructions to prepare the meal.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+API connection and fetching processses are main purpose of this project's creation.
 
-This project is made for educational purposes. API connection and fetching processses are main purpose of this project's creation. 
+React, React-router, TypeScript and TailwindCSS is used.
