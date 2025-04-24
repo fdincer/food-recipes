@@ -17,8 +17,7 @@ import { searchIngredientLoader } from './Pages/Searchpage/searchIngredientLoade
 import SearchCategoryPage from './Pages/Searchpage/SearchCategoryPage';
 import { searchCategoryLoader } from './Pages/Searchpage/searchCategoryLoader';
 
-
-
+import { ErrorBoundary } from './Components/ErrorBoundary';
 
 const router = createBrowserRouter([
   {
@@ -33,22 +32,26 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <SearchRecipePage />,
-        loader: searchRecipeLoader
+        loader: searchRecipeLoader,
+        errorElement: <ErrorBoundary />
       },
       {
         path: "/search/ingredient",
         element: <SearchIngredientPage />,
-        loader: searchIngredientLoader
+        loader: searchIngredientLoader,
+        errorElement: <ErrorBoundary />
       },
       {
         path: "/search/category/:name",
         element: <SearchCategoryPage />,
-        loader: searchCategoryLoader
+        loader: searchCategoryLoader,
+        errorElement: <ErrorBoundary />
       },
       {
         path: "/recipe/:name",
         element: <RecipePage />,
-        loader: recipeLoader
+        loader: recipeLoader,
+        errorElement: <ErrorBoundary />
       }
     ]
   }

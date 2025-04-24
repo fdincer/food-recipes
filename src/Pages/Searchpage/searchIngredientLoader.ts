@@ -10,11 +10,16 @@ export async function searchIngredientLoader({request}: {request: Request}): Pro
 
     const { searchParams } = new URL(request.url);
     const ingredient = searchParams.get("ingredient");
-    if(!ingredient){
-        throw new Error("Ingredient needs to be provided");
+
+    if (!ingredient) {
+        throw new Response("Ingredient are needed.", { status: 400 });
     }
-    
+
     const recipes = await searchRecipeByIngredient(ingredient);
+
+    if (!recipes || recipes.length === 0) {
+        throw new Response("No recipes are found", { status: 404 });
+    }
 
     return {
         recipeList: recipes,

@@ -91,7 +91,7 @@ export default function RecipePage(){
                     { renderedInstructions }
                 </div>
 
-                <div className="border-8 border-yellow-300 rounded-xl mx-8 my-2 p-8 bg-yellow-50">
+                <div className="border-4 border-yellow-300 rounded-xl mx-8 my-2 p-8 bg-yellow-50">
                     <p className="font-bold text-xl mb-2 border-l-4 pl-2 border-amber-900">Need more help?</p>
                     <hr className="mb-4"></hr>
                     <Link to={r.recipeYoutube} target="_blank" className="flex flex-row items-center w-fit ">
