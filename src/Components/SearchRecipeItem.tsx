@@ -23,9 +23,9 @@ export default function SearchRecipeItem({recipe}: { recipe: RecipeItem[]} ) {
         let renderedTags;
 
         if(tags !== null){
-            const tagArray = tags.split(",");
+            const tagArray = tags?.split(",");
 
-            renderedTags = tagArray.map( (tag) => {
+            renderedTags = tagArray?.map( (tag) => {
                 return <div className="flex border gap-1 rounded-md bg-amber-700 justify-center p-1 text-white text-sm" key={tag}>
                     {tag}
                 </div>
