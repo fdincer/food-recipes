@@ -5,7 +5,6 @@ import { useNavigate } from "react-router";
 export function ErrorBoundary() {
 
     const navigate = useNavigate();
-    
 
     const handleClick = () => {
         navigate("/");
@@ -19,7 +18,6 @@ export function ErrorBoundary() {
                 <div className="mx-auto text-gray-800 text-4xl text-center">
                     <p>No recipes are found</p>
                     <p>Whoops! </p>
-                    
                 </div>
                 
                 <p className="text-gray-600 text-lg text-center my-4"> 
