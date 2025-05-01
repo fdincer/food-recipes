@@ -22,22 +22,22 @@ export default function HomePage(){
                         <h1 className="text-3xl font-bold mb-4 text-gray-800">
                         Welcome to <span className="text-amber-700 text-4xl">Food Recipes</span>
                         </h1>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-gray-600 mb-6 md:text-xl">
                         Your ultimate destination for delicious and easy-to-follow cooking recipes! Whether you're a seasoned chef or a beginner, our collection of dishes will inspire confidence and creativity in the kitchen.
                         </p>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-gray-600 mb-6 md:text-xl">
                         From quick weeknight meals to gourmet delights, follow step-by-step instructions and explore flavors from around the world.
                         </p>
-                        <p className="text-xl italic font-medium text-amber-700">
+                        <p className="text-xl italic font-medium text-amber-700 md:text-xl">
                         Start your <span className="underline">culinary adventure</span> today!
                         </p>
                     </div>
                 </div>
 
                 <div className="flex flex-col justify-center bg-zinc-100 my-2 py-2">
-                    <div className="text-gray-800 text-3xl font-bold py-4 mx-auto mb-4">Here is some random recipes for you!</div>
+                    <div className="font-bold text-gray-800 text-lg  py-4 mx-auto mb-1 md:text-3xl md:mb-4">Here is some random recipes for you!</div>
 
-                    <div className="flex gap-2 container mx-auto max-w-5/6 flex-wrap justify-center items-center">
+                    <div className="flex flex-wrap flex-col md:flex-row gap-2 mx-auto justify-center items-center">
                         <MenuRecipeItem recipe={randomRecipe}/>
                         <MenuRecipeItem recipe={randomRecipe2}/>
                         <MenuRecipeItem recipe={randomRecipe3}/>

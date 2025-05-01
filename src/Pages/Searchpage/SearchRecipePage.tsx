@@ -8,10 +8,10 @@ export default function SearchRecipePage(){
     
     return(
         <div>
-            <div className="flex flex-col container my-8 items-center mx-auto">
+            <div className="flex container my-8 items-center mx-auto">
                 <SearchRecipeItem recipe={recipeList} />
             </div>
-            <p className="mb-2 p-2 border-2 border-bg-yellow-400 bg-yellow-200 text-lg"> <strong>Search Type:</strong> {searchType}</p>
+            <p className="mb-2 p-2 border-2 border-bg-yellow-400 bg-yellow-200 text-sm md:text-lg"> <strong>Search Type:</strong> {searchType}</p>
         </div>
     )
 }

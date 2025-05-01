@@ -27,7 +27,7 @@ export default function MenuRecipeItem({recipe}: { recipe: RecipeItem[]} ) {
         } 
 
         return (
-            <div className="flex flex-col bg-white flex-wrap items-center max-h-full overflow-y-auto border rounded-xl m-2 p-2 max-w-md sm:mx-auto" key={r.recipeName}>
+            <div className="flex flex-col bg-white flex-wrap items-center max-h-full overflow-y-auto border rounded-xl m-2 p-2 w-fit md:max-w-md md:mx-auto" key={r.recipeName}>
                 <div>
                     <img src={r.recipeThumb} alt={r.recipeName} className="w-60" />
                 </div>
@@ -49,7 +49,7 @@ export default function MenuRecipeItem({recipe}: { recipe: RecipeItem[]} ) {
                         { tags !== null ? renderedTags : <p className="mt-1">No Specified Tags</p>}
                     </div>
 
-                    <button onClick={handleClick} className="border space-x-4 px-8 py-4 mt-4 bg-amber-700 hover:bg-amber-500 text-amber-50 cursor-pointer hover:underlined flex items-center justify-between text-lg">
+                    <button onClick={handleClick} className="space-x-4 px-4 py-2 mt-2 md:px-8 md:py-4 md:mt-4 bg-amber-700 hover:bg-amber-500 text-amber-50 cursor-pointer hover:underlined flex items-center justify-between text-lg">
                         <p className="">View Recipe</p>
                         <SlArrowRight />
                     </button>

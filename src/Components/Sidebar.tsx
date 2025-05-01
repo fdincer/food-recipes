@@ -21,8 +21,8 @@ export default function Sidebar( {data}: { data: Categories[]} ) {
     });
 
     return(
-        <div className="sm:flex-col rounded-xl mx-2 my-4 p-4 border" onMouseEnter={ () => {setCategoryShow(!categoryShow)}} onMouseLeave={ () => setCategoryShow(!categoryShow)}>
-            <div className="flex flex-row text-3xl mb-4 font-bold items-center justify-center gap-x-2 mx-auto mt-2">
+        <div className="md:flex-col rounded-xl mx-2 my-4 p-1 md:p-3 border shadow-lg shadow-gray-300" onMouseEnter={ () => {setCategoryShow(!categoryShow)}} onMouseLeave={ () => setCategoryShow(!categoryShow)}>
+            <div className="flex flex-row font-bold text-lg mb-1 md:text-3xl md:mb-4 items-center justify-center gap-x-2 mx-auto mt-2">
                     Categories  
                     { categoryShow ? <FaArrowDownShortWide /> : <GiHamburgerMenu /> }
             </div>

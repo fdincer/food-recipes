@@ -26,10 +26,10 @@ export default function SearchInput() {
 
     return (
         <form onSubmit={handleSubmit} className="flex flex-row items-center justify-center">
-            <div className="flex px-4 items-center rounded space-x-2">
+            <div className="flex px-2 items-center rounded space-x-2 w-fit">
                 
                 <p>Search By:</p>
-                <select className="border p-0.5 border-gray-500 rounded" value={searchBy} 
+                <select className="border text-sm md:text-md p-0.5 border-gray-500 rounded" value={searchBy} 
                     onChange={e => {setSearchBy(e.target.value)} }>
                    <option value="recipe">Recipe</option>
                    <option value="ingredient">Ingredient</option>
@@ -42,7 +42,7 @@ export default function SearchInput() {
                     </div>
                     <input 
                         value={input} onChange={ e => SetInput(e.target.value) } 
-                        className="pl-12 py-3 w-full"
+                        className="pl-12 py-2 w-full "
                         placeholder="Search Meal..."
                     />
                 </div>
